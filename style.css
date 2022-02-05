@@ -34,6 +34,9 @@ a {
 body {
     background-color: var(--body-color);
     transition: var(--trans-4);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 body.darkmode {
@@ -53,6 +56,7 @@ nav {
     position: fixed;
     width: 260px;
     height: 100vh;
+    left: 0;
     background-color: var(--sidebar-color);
     padding: 10px;
     z-index: 100;
@@ -152,7 +156,7 @@ nav .header .profile .text-profile .divisi {
 
 nav .menu ul li {
     /* background: red; */
-    margin: 10px 0;
+    margin: .2em 0;
     width: 100%;
 }
 
@@ -212,6 +216,7 @@ nav .footer a .logout:hover {
     padding: 10px 0;
     white-space: nowrap;
     border-radius: 5px;
+    position: relative;
 }
 
 .mode .icon {
@@ -230,13 +235,16 @@ nav .footer a .logout:hover {
     position: absolute;
 }
 
+nav.navClose .mode .switch-mode {
+    right: -2px;
+}
+
 .mode .switch-mode {
-    margin-left: 0px;
     /* background-color: red; */
     width: 65px;
     height: 35px;
     /* border-radius: 30px; */
-    right: 7px;
+    right: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -256,8 +264,8 @@ nav .footer a .logout:hover {
 .mode .switch-mode .toggle::before {
     content: '';
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 1em;
+    height: 1em;
     background-color: var(--sidebar-color);
     /* box-shadow: 0 0 5px rgba(0, 0, 0, .5); */
     border-radius: 50%;
